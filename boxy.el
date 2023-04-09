@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021 Free Software Foundation, Inc.
 
 ;; Author: Taylor Grinn <grinntaylor@gmail.com>
-;; Version: 1.1.2
+;; Version: 1.1.3
 ;; File: boxy.el
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: tools
@@ -207,9 +207,8 @@
 
 ;;;; Custom types
 
-(defun boxy-relationship-p (str)
-  "Return t if STR is a boxy relationship, nil otherwise."
-  (member str boxy-relationships))
+(cl-deftype boxy-relationship (&optional _)
+  '(satisfies (lambda (rel) (member rel boxy-relationships))))
 
 ;;;; Boxy mode
 
@@ -407,7 +406,8 @@
   (visual-line-mode -1)
   (setq indent-tabs-mode nil)
   (cursor-sensor-mode t)
-  (setq truncate-lines t))
+  (setq truncate-lines t)
+  (buffer-face-set 'fixed-pitch))
 
 (cl-defun boxy-pp (box
                    &key
