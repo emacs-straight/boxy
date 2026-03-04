@@ -1,2 +1,2 @@
 ;; Generated package description from boxy.el  -*- no-byte-compile: t; lexical-binding:t -*-
-(define-package "boxy" "2.0.0.0.20260301.114502" "A boxy layout framework" '((emacs "26.1")) :commit "b8ab113059db03427cc0e379a9d07d445c0cf170" :authors '(("Amy Grinn" . "grinn.amy@gmail.com")) :maintainer '("Amy Grinn" . "grinn.amy@gmail.com") :keywords '("tools") :url "https://gitlab.com/grinn.amy/boxy")
+(define-package "boxy" "2.0.1.0.20260303.181733" "A boxy layout framework" '((emacs "26.1")) :commit "793e3d65ffb970fa8b52e89d25e7ea5e6f39508a" :authors '(("Amy Pillow" . "amypillow@lavache.com")) :maintainer '("Amy Pillow" . "amypillow@lavache.com") :keywords '("tools") :url "https://codeberg.org/strawburster/boxy")
